@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
 * {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -12,6 +12,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh; /* Set height to full viewport height */
+  margin: 0; /* Remove default margin */
 }
 
 .App {
@@ -25,10 +27,12 @@ h1 {
 }
 
 .TodoWrapper {
-  background: #1A1A40;
-  margin-top: 5rem;
+  background: #1a1a40;
   padding: 2rem;
   border-radius: 5px;
+  width: 100%; /* Adjusted for mobile */
+  max-width: 800px; /* Limit width for larger screens */
+  margin: 0 auto; /* Center the TodoWrapper div horizontally */
 }
 
 .TodoForm {
@@ -43,7 +47,7 @@ h1 {
   padding: 0.5rem 1rem;
   margin-top: 1rem;
   margin-bottom: 2rem;
-  width: 300px;
+  width: 100%; /* Adjusted for mobile */
   color: #fff;
 }
 
@@ -89,4 +93,34 @@ h1 {
 .delete-icon {
   cursor: pointer;
 }
- 
+
+.footer {
+  margin-top: 20px;
+  color: #fff;
+}
+
+.TodoWrapper span {
+  color: orangered;
+}
+
+@media (max-width: 768px) {
+  .TodoWrapper {
+    width: 90%; /* Adjust width for small screens */
+    max-width: none; /* Remove max-width for small screens */
+  }
+
+  .todo-input {
+    max-width: none; /* Remove max-width for small screens */
+  }
+}
+
+@media (min-width: 769px) {
+  .TodoWrapper {
+    width: 130%; /* Adjust width for small screens */
+    max-width: none; /* Remove max-width for small screens */
+  }
+
+  .todo-input {
+    max-width: none; /* Remove max-width for small screens */
+  }
+}

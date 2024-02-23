@@ -58,6 +58,7 @@ export const TodoWrapper = () => {
           />
         )
       )}
+      <p className="footer">Designed by <span>Praveen</span> </p>
     </div>
   );
 };
